@@ -1,0 +1,17 @@
+$ORIGIN roxana.com.
+$TTL 3H
+@       IN SOA   server.roxana.com. root@roxana.com. (
+                                        0       ; serial
+                                        1D      ; refresh
+                                        1H      ; retry
+                                        1W      ; expire
+                                        3H )    ; minimum
+@       IN      NS     server.roxana.com.
+
+;host en la zona
+
+server IN A 192.168.50.3
+parcial IN CNAME server
+@ IN MX 10 server.roxana.com.
+mail IN A 192.168.50.3
+miotro IN CNAME web
